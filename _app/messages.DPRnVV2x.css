@@ -1,0 +1,16 @@
+.wrapper.svelte-jamalb {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    justify-content: space-between
+}
+
+.wrapper.svelte-jamalb>*+* {
+    margin-left: var(--spacing-2)
+}
+
+.fixture-details.svelte-jamalb {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2)
+}

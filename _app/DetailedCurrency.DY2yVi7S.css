@@ -1,0 +1,57 @@
+.content.svelte-14fe4ko {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.fiat-wrapper.svelte-1atdul1 {
+    display: inline-flex;
+    align-items: center
+}
+
+.fiat-wrapper.svelte-1atdul1>*+* {
+    margin-left: var(--spacing-1)
+}
+
+.ctainer.svelte-ipoirk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-2);
+    width: 100%
+}
+
+.ctainer.hide-conversion.svelte-ipoirk {
+    align-items: flex-start
+}
+
+.ctainer.svelte-ipoirk span {
+    line-height: 1 !important
+}
+
+.currency-details.svelte-ipoirk {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2)
+}
+
+.currency-ctainer.svelte-ipoirk {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2)
+}
+
+.content.svelte-ipoirk {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums
+}
+
+.value-ctainer.svelte-ipoirk {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    align-items: flex-end
+}

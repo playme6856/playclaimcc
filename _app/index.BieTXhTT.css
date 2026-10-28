@@ -1,0 +1,133 @@
+.level-1.svelte-td2nup {
+    --header-background: var(--ds-color-surface-highest, var(--color-grey-800));
+    --title-color: var(--ds-color-on-surface, var(--color-white));
+    --content-background: var(--ds-color-surface-highest, var(--color-grey-600));
+    --content-border: var(--ds-color-nontext-decorative-on-surface, var(--color-grey-800))
+}
+
+:where(:root.ds-active--color) .level-1.inverse.svelte-td2nup {
+    --header-background: var(--ds-color-surface-sunken);
+    --content-background: transparent
+}
+
+.level-2.svelte-td2nup {
+    --header-background: var(--ds-color-surface-highest, var(--color-grey-500));
+    --title-color: var(--ds-color-on-surface, var(--color-grey-100));
+    --content-background: var(--ds-color-surface-highest, var(--color-grey-500));
+    --content-border: var(--ds-color-nontext-decorative-on-surface, var(--color-grey-400))
+}
+
+:where(:root.ds-active--color) .level-2.inverse.svelte-td2nup {
+    --header-background: var(--ds-color-surface-sunken);
+    --content-background: transparent
+}
+
+.level-3.svelte-td2nup {
+    --header-background: var(--ds-color-surface-highest, var(--color-grey-700));
+    --title-color: var(--ds-color-on-surface, var(--color-grey-100));
+    --content-background: var(--ds-color-surface-highest, var(--color-grey-700));
+    --content-border: var(--ds-color-nontext-decorative-on-surface, var(--color-grey-400))
+}
+
+:where(:root.ds-active--color) .level-3.inverse.svelte-td2nup {
+    --header-background: var(--ds-color-surface-sunken);
+    --content-background: transparent
+}
+
+.level-4.svelte-td2nup {
+    --header-background: var(--ds-color-surface-highest, var(--color-grey-600));
+    --title-color: var(--ds-color-on-surface, var(--color-white));
+    --content-background: var(--ds-color-surface-highest, var(--color-grey-700));
+    --content-border: var(--ds-color-nontext-decorative-on-surface, transparent)
+}
+
+:where(:root.ds-active--color) .level-4.inverse.svelte-td2nup {
+    --header-background: var(--ds-color-surface-sunken);
+    --content-background: transparent
+}
+
+.title.svelte-td2nup {
+    display: inline-flex;
+    align-items: center;
+    transition: .3s transform;
+    font-weight: var(--ds-font-weight-thick);
+    text-align: left;
+    color: var(--ds-color-on-surface, var(--secondaryAccordion-header-title-color));
+    margin-right: var(--spacing-1)
+}
+
+.title.svelte-td2nup>*+* {
+    margin-left: var(--spacing-1)
+}
+
+.header.svelte-td2nup {
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    padding: var(--spacing-3) var(--spacing-4);
+    color: var(--title-color);
+    cursor: pointer
+}
+
+.header.svelte-td2nup:focus-visible {
+    outline: .125rem solid var(--color-grey-300);
+    outline-offset: .125rem
+}
+
+.secondary-accordion.svelte-td2nup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    box-shadow: var(--btn-shadow);
+    background: var(--header-background)
+}
+
+:where(:root.ds-active--color) .secondary-accordion.svelte-td2nup {
+    box-shadow: none
+}
+
+.secondary-accordion.svelte-td2nup>.header:where(.svelte-td2nup) {
+    width: 100%
+}
+
+.secondary-accordion.is-open.svelte-td2nup .header:where(.svelte-td2nup) {
+    border-radius: var(--ds-radius-md) var(--ds-radius-md) 0 0
+}
+
+.content.svelte-td2nup {
+    background: var(--content-background);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0 0 var(--ds-radius-md) var(--ds-radius-md)
+}
+
+.content.render-content.svelte-td2nup {
+    display: none
+}
+
+.content.is-open.svelte-td2nup {
+    border-top: var(--ds-border-width-default, 2px) solid var(--ds-color-nontext-decorative-on-surface, var(--content-border))
+}
+
+.content.is-open.render-content.svelte-td2nup {
+    display: flex
+}
+
+.arrow.svelte-td2nup {
+    display: flex;
+    align-items: center;
+    color: var(--ds-color-on-surface, var(--title-color))
+}
+
+.arrow.svelte-td2nup .svg-icon {
+    font-size: var(--text-size-base)
+}
+
+.arrow.svelte-td2nup>*+* {
+    margin-left: var(--spacing-2)
+}

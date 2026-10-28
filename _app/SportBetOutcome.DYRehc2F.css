@@ -1,0 +1,108 @@
+.outcome.svelte-1b7980v {
+    background-color: var(--color-grey-900);
+    display: flex;
+    border-radius: var(--ds-radius-md);
+    transition: background .1s;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    color: var(--ds-color-on-surface, var(--color-white));
+    align-items: flex-start;
+    min-width: 0;
+    padding: var(--spacing-2) var(--spacing-3)
+}
+
+:where(:root.ds-active--color) .outcome.svelte-1b7980v {
+    background-color: var(--ds-color-surface-sunken)
+}
+
+.outcome.svelte-1b7980v:focus-visible {
+    outline: var(--focus-outline-white);
+    outline-offset: .125rem
+}
+
+.outcome:not(.inactive)[disabled].svelte-1b7980v {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: .5
+}
+
+.outcome.isMulti.svelte-1b7980v {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+@media (hover: hover) {
+    .outcome.svelte-1b7980v:hover:not(.selected) {
+        background-color:var(--color-blue-800)
+    }
+
+    :where(:root.ds-active--color) .outcome.svelte-1b7980v:hover:not(.selected) {
+        background: linear-gradient(var(--ds-color-base-primary),var(--ds-color-base-primary)),linear-gradient(var(--ds-color-state-layer-base-hovered),var(--ds-color-state-layer-base-hovered))
+    }
+}
+
+.outcome.selected.svelte-1b7980v {
+    background: var(--color-blue-500);
+    box-shadow: var(--shadows-lg)
+}
+
+:where(:root.ds-active--color) .outcome.selected.svelte-1b7980v {
+    background-color: var(--ds-color-base-primary);
+    box-shadow: none
+}
+
+.outcome.inactive.svelte-1b7980v:not(.selected) {
+    background: var(--color-grey-900);
+    pointer-events: none
+}
+
+:where(:root.ds-active--color) .outcome.inactive.svelte-1b7980v:not(.selected) {
+    background: var(--ds-color-surface-sunken);
+    opacity: var(--ds-opacity-disabled)
+}
+
+.outcome.inactive.selected.svelte-1b7980v>:where(.svelte-1b7980v) {
+    opacity: .2
+}
+
+.outcome-content.svelte-1b7980v {
+    width: 100%;
+    display: flex;
+    justify-items: flex-start;
+    align-self: center
+}
+
+.outcome-content.horizontal.svelte-1b7980v {
+    justify-content: space-between;
+    align-items: center
+}
+
+.outcome-content.center.svelte-1b7980v {
+    justify-content: center
+}
+
+.outcome-content.svelte-1b7980v:not(.horizontal) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start
+}
+
+.outcome-content.svelte-1b7980v .is-truncate>.name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inherit;
+    color: #fff3;
+    display: inline-block
+}
+
+.odds.svelte-1b7980v {
+    position: relative
+}
+
+:where(:root.ds-active--color) .outcome.svelte-1b7980v:hover .odds [data-ds-text] {
+    color: var(--ds-color-on-surface)!important
+}

@@ -1,0 +1,74 @@
+.expandable-grid-container.svelte-lrjd55 {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.header.svelte-lrjd55 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--ds-spacing-3)
+}
+
+.header.svelte-lrjd55:not(:has(*)) {
+    display: none
+}
+
+.expandable-grid.svelte-lrjd55 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(var(--items-per-row),1fr);
+    column-gap: var(--column-gap);
+    row-gap: var(--ds-spacing-6);
+    transition: height var(--transition-duration) cubic-bezier(.331,0,0,1);
+    align-content: start;
+    position: relative;
+    padding-bottom: var(--grid-bottom-extension);
+    margin-bottom: calc(-1 * var(--grid-bottom-extension))
+}
+
+.expandable-grid.svelte-lrjd55:not(.is-transitioning) {
+    transition-duration: 0s
+}
+
+.expandable-grid.is-transitioning.svelte-lrjd55:not(.is-shrinking) {
+    clip-path: polygon(0 0,100% 0,100% calc(100% - var(--grid-bottom-extension)),0 calc(100% - var(--grid-bottom-extension)))
+}
+
+.expandable-grid.svelte-lrjd55:not(.is-transitioning):not(.is-shrinking) {
+    clip-path: polygon(0 -40px,100% -40px,100% calc(100% - var(--grid-bottom-extension) + 40px),0 calc(100% - var(--grid-bottom-extension) + 40px))
+}
+
+.expandable-grid.is-shrinking.svelte-lrjd55 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%)
+}
+
+.counting-text.svelte-lrjd55 {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--ds-spacing-6);
+    color: var(--color-subtle-on-surface, var(--ds-legacy-color-grey-200));
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "salt" on;
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-sm);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--font-line-height-5)
+}
+
+.load-more-container.svelte-lrjd55 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--ds-spacing-3)
+}
+
+.divider.svelte-lrjd55 {
+    flex: 1;
+    height: var(--ds-border-width-default, 1px);
+    background: var(--ds-color-nontext-decorative-on-surface, var(--color-grey-400))
+}

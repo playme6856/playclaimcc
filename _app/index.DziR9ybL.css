@@ -1,0 +1,26 @@
+.seal.svelte-1sl5694 img {
+    width: 106px!important;
+    margin: var(--spacing-0-5);
+    border-radius: var(--ds-radius-sm)
+}
+
+.seal.svelte-1sl5694 div {
+    overflow: visible!important
+}
+
+.seal.svelte-1sl5694 {
+    display: flex;
+    align-items: center
+}
+.balance-toggle.svelte-4j1xoj {
+    display: grid;
+    grid-template-columns: minmax(100px,1fr) minmax(min-content,auto)
+}
+
+.balance-toggle.svelte-4j1xoj .dropdown,.balance-toggle.svelte-4j1xoj .currency {
+    max-width: 100%
+}
+
+.balance-toggle.svelte-4j1xoj .currency>span:not(.content) {
+    overflow: visible
+}
